@@ -1,13 +1,28 @@
-package data_structures.linked_list;
+package linked_list;
 
 public class LinkedListDemo {
     public static void main(String args[]) {
-        LinkedList<Object> linkedList = new LinkedList<>();
+        // Initialize the Linked List
+        LinkedList<String> linkedList = new LinkedList<>();
 
-        linkedList.push("abc");
-        linkedList.push(123);
-        linkedList.push(0.3847);
+        // Push all the data
+        linkedList.push("Foo");
+        linkedList.push("Bar");
+        linkedList.push("Cat");
 
-        linkedList.print();
+        // Print out the list
+        linkedList.view();
+
+        // Print out the list head and the list tail
+        System.out.println(linkedList.head.key);
+        System.out.println(linkedList.tail.key);
+
+        // Check removing data from the end of the list
+        linkedList.pop();
+        linkedList.view();
+
+        // Check removing data from the beginning of the list
+        linkedList.shift();
+        linkedList.view();
     }
 }
