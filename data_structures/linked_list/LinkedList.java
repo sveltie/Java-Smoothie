@@ -7,6 +7,7 @@ package linked_list;
 public class LinkedList<T> {
     Node<T> head;
     Node<T> tail;
+    int size;
 
     class Node<U> {
         U key;
@@ -37,7 +38,7 @@ public class LinkedList<T> {
      * 
      * @return boolean depending on the list content
      */
-    public Boolean isEmpty() {
+    public boolean isEmpty() {
         return (head == null);
     }
 
@@ -111,5 +112,25 @@ public class LinkedList<T> {
             node.next = null;
             tail = node;
         }
+    }
+
+    /**
+     * Check whether a list contain a given key
+     * 
+     * @param key
+     * @return boolean
+     */
+    public boolean contain(T key) {
+        Node<T> node = head;
+
+        while (node != null) {
+            if (node.key == key) {
+                return true;
+            }
+
+            node = node.next;
+        }
+
+        return false;
     }
 }

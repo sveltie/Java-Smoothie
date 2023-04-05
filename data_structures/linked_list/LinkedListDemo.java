@@ -24,5 +24,8 @@ public class LinkedListDemo {
         // Check removing data from the beginning of the list
         linkedList.shift();
         linkedList.view();
+
+        System.out.println(linkedList.contain("test"));
+        System.out.println(linkedList.contain("Bar"));
     }
 }
