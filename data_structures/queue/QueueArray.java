@@ -26,7 +26,7 @@ public class QueueArray<T> implements Queue<T> {
      */
     public void enqueue(T item) {
         if (write == q.length) {
-            if (read == 2) {
+            if (read >= 2) {
                 write = 0;
             } else {
                 System.out.println("Queue is full");
